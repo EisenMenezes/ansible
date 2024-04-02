@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update repo index (apt update)
+    apt:
+      update_cache: yes  
+
+  - name: Apply all updates 
+    apt:
+      upgrade: yes
